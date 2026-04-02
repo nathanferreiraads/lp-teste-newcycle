@@ -75,14 +75,12 @@
     .navbar-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
       padding: 6px 12px;
-      background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px;
       transition: background 0.35s ease, padding 0.35s ease;
       text-decoration: none;
     }
     .navbar.scrolled .navbar-logo-link { background: transparent !important; padding: 0; }
-    .navbar-logo { height: 40px; width: auto; display: block; transition: height 0.35s ease; }
-    .navbar.scrolled .navbar-logo { height: 34px; }
+    .navbar-logo { height: 52px; width: auto; display: block; transition: height 0.35s ease, filter 0.35s ease; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8)) drop-shadow(0 0 1px rgba(255,255,255,0.3)); }
+    .navbar.scrolled .navbar-logo { height: 42px; filter: none; }
     .navbar-links { display: flex; gap: 32px; align-items: center; }
     .navbar-links a {
       font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.5px;
@@ -119,15 +117,16 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(13,30,53,0.25) 0%, rgba(13,30,53,0.78) 100%);
+      background: linear-gradient(160deg, rgba(13,30,53,0.06) 0%, rgba(13,30,53,0.40) 100%);
       z-index: 1;
     }
     .hero-content { position: relative; z-index: 2; max-width: 760px; padding: 120px 24px 80px; }
-    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: var(--teal); margin-bottom: 24px; }
-    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; }
-    .hero-sub { font-size: 18px; color: var(--text-light2); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: #FFFFFF; margin-bottom: 24px; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 40px rgba(0,0,0,0.6); }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.92); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 1px 12px rgba(0,0,0,0.85); }
     .hero-note { font-size: 13px; color: var(--text-light2); margin-top: 20px; }
-    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 32px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 26px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 480px) { .hero h1 { font-size: 22px; } }
 
     /* ── TRANSFORMAÇÃO ── */
     .s-transform { background: var(--bg-light); padding: 100px 0; }
@@ -245,11 +244,10 @@
     .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 48px; margin-bottom: 48px; }
     .footer-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
-      padding: 6px 12px; background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px; margin-bottom: 16px; text-decoration: none;
+      margin-bottom: 16px; text-decoration: none;
     }
-    .footer-logo { height: 40px; width: auto; display: block; }
-    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light2); margin-bottom: 16px; }
+    .footer-logo { height: 52px; width: auto; display: block; filter: brightness(1.3) drop-shadow(0 1px 6px rgba(255,255,255,0.4)); }
+    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; margin-bottom: 16px; }
     .footer-about { font-size: 14px; color: var(--text-light2); line-height: 1.7; }
     .footer h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #FFFFFF; margin-bottom: 20px; }
     .footer-links a { display: block; font-size: 14px; color: var(--text-light2); padding: 4px 0; transition: color 0.3s ease; }
@@ -283,7 +281,7 @@
   <section class="hero">
     <div class="hero-content">
       <p class="hero-tag">BICICLETA HORIZONTAL · NEW CYCLE</p>
-      <h1>Bicicleta Horizontal LF-450D: aeróbico completo sem impacto, seguro para qualquer perfil de paciente</h1>
+      <h1>Bicicleta Horizontal&nbsp;LF-450D: aeróbico completo sem impacto, seguro para qualquer perfil de&nbsp;paciente</h1>
       <p class="hero-sub">Posição reclinada que elimina sobrecarga articular. Display LED com monitoramento de frequência cardíaca e capacidade até 160kg. Indicada para reabilitação cardiorrespiratória, ortopédica e geriátrica.</p>
       <a href="#form-produto" class="btn-cta">Solicitar proposta para este equipamento →</a>
       <p class="hero-note">🔒 Sem compromisso · Retorno em até 24h · Consultoria gratuita</p>
@@ -601,23 +599,9 @@
             </label>
           </div>
 
-          <div class="radio-group">
-            <div class="radio-group-title">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</div>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="ate10k" required>
-              <span class="radio-custom"></span>
-              <span>Até R$10.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="10k-30k">
-              <span class="radio-custom"></span>
-              <span>De R$10.000 a R$30.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="acima30k">
-              <span class="radio-custom"></span>
-              <span>Acima de R$30.000</span>
-            </label>
+          <div class="form-group">
+            <label for="investimento">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</label>
+            <textarea id="investimento" name="investimento" class="form-input" placeholder="Descreva sua estimativa de investimento..." rows="3" required style="resize:vertical; min-height:90px;"></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="btnSubmit">SOLICITAR PROPOSTA PARA ESTE EQUIPAMENTO →</button>
@@ -723,7 +707,7 @@
         var cidade       = document.getElementById('cidade').value.trim();
         var perfil       = form.querySelector('input[name="perfil"]:checked');
         var momento      = form.querySelector('input[name="momento"]:checked');
-        var investimento = form.querySelector('input[name="investimento"]:checked');
+        var investimento = document.getElementById('investimento').value.trim();
 
         if (!nome || !whatsapp || !email || !cidade || !perfil || !momento || !investimento) {
           formError.textContent = 'Por favor, preencha todos os campos antes de enviar.';
@@ -744,7 +728,7 @@
 
         var payload = {
           nome: nome, whatsapp: whatsapp, email: email, cidade: cidade,
-          perfil: perfil.value, momento: momento.value, investimento: investimento.value,
+          perfil: perfil.value, momento: momento.value, investimento: investimento,
           origem: 'lp-bicicleta-horizontal'
         };
 

@@ -75,14 +75,12 @@
     .navbar-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
       padding: 6px 12px;
-      background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px;
       transition: background 0.35s ease, padding 0.35s ease;
       text-decoration: none;
     }
     .navbar.scrolled .navbar-logo-link { background: transparent !important; padding: 0; }
-    .navbar-logo { height: 40px; width: auto; display: block; transition: height 0.35s ease; }
-    .navbar.scrolled .navbar-logo { height: 34px; }
+    .navbar-logo { height: 52px; width: auto; display: block; transition: height 0.35s ease, filter 0.35s ease; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8)) drop-shadow(0 0 1px rgba(255,255,255,0.3)); }
+    .navbar.scrolled .navbar-logo { height: 42px; filter: none; }
     .navbar-links { display: flex; gap: 32px; align-items: center; }
     .navbar-links a {
       font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.5px;
@@ -119,15 +117,16 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(13,30,53,0.25) 0%, rgba(13,30,53,0.78) 100%);
+      background: linear-gradient(160deg, rgba(13,30,53,0.06) 0%, rgba(13,30,53,0.40) 100%);
       z-index: 1;
     }
     .hero-content { position: relative; z-index: 2; max-width: 760px; padding: 120px 24px 80px; }
-    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: var(--teal); margin-bottom: 24px; }
-    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; }
-    .hero-sub { font-size: 18px; color: var(--text-light2); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: #FFFFFF; margin-bottom: 24px; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 40px rgba(0,0,0,0.6); }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.92); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 1px 12px rgba(0,0,0,0.85); }
     .hero-note { font-size: 13px; color: var(--text-light2); margin-top: 20px; }
-    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 32px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 26px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 480px) { .hero h1 { font-size: 22px; } }
 
     /* ── TRANSFORMAÇÃO ── */
     .s-transform { background: var(--bg-light); padding: 100px 0; }
@@ -245,11 +244,10 @@
     .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 48px; margin-bottom: 48px; }
     .footer-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
-      padding: 6px 12px; background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px; margin-bottom: 16px; text-decoration: none;
+      margin-bottom: 16px; text-decoration: none;
     }
-    .footer-logo { height: 40px; width: auto; display: block; }
-    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light2); margin-bottom: 16px; }
+    .footer-logo { height: 52px; width: auto; display: block; filter: brightness(1.3) drop-shadow(0 1px 6px rgba(255,255,255,0.4)); }
+    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; margin-bottom: 16px; }
     .footer-about { font-size: 14px; color: var(--text-light2); line-height: 1.7; }
     .footer h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #FFFFFF; margin-bottom: 20px; }
     .footer-links a { display: block; font-size: 14px; color: var(--text-light2); padding: 4px 0; transition: color 0.3s ease; }
@@ -283,8 +281,8 @@
   <section class="hero">
     <div class="hero-content">
       <p class="hero-tag">ESTEIRA KIDS · NEW CYCLE</p>
-      <h1>Esteira Kids: reabilitação infantil onde o paciente estiver, portátil e eficaz</h1>
-      <p class="hero-sub">30kg com rodinhas e alça ergonômica. Leve o tratamento até a criança, em domicílio ou clínica, sem abrir mão da tecnologia. Velocidade inicial 0,1 km/h para controle total.</p>
+      <h1>Esteira Ergométrica&nbsp;Kids: Tecnologia que acompanha o desenvolvimento infantil.</h1>
+      <p class="hero-sub">Compacta e funcional, a esteira Kids leva a tecnologia do tratamento onde a criança estiver. Com velocidade inicial de 0,1 km/h garante máxima precisão e segurança desde o primeiro passo.</p>
       <a href="#form-produto" class="btn-cta">Solicitar proposta para este equipamento →</a>
       <p class="hero-note">🔒 Sem compromisso · Retorno em até 24h · Consultoria gratuita</p>
     </div>
@@ -294,7 +292,7 @@
   <section class="s-transform">
     <div class="container text-center">
       <span class="badge reveal">O QUE MUDA NA SUA CLÍNICA</span>
-      <h2 class="reveal">Resultados que você vai ver desde o primeiro atendimento</h2>
+      <h2 class="reveal">Resultados visíveis e mensuráveis desde o primeiro atendimento.</h2>
       <p class="section-sub reveal">A Esteira Kids foi projetada para levar reabilitação de qualidade até onde a criança estiver.</p>
       <div class="transform-grid">
 
@@ -303,7 +301,7 @@
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Fisioterapeuta leva o equipamento até o domicílio do paciente</div>
+          <div class="transform-depois">Com rodinhas e alça para transporte, a Esteira Kids é portátil e permite levar o atendimento com praticidade para qualquer ambiente.</div>
         </div>
 
         <div class="transform-card reveal">
@@ -315,11 +313,11 @@
         </div>
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Treino de marcha limitado por falta de equipamento adequado</div>
+          <div class="transform-antes">Baixa adesão aos ergômetros devido à velocidade inicial elevada.</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Velocidade 0,1 km/h para controle total mesmo em casos neurológicos infantis</div>
+          <div class="transform-depois">Para controle total, mesmo em casos mais avançados, a Esteira Kids inicia a partir de 0,1 km/h.</div>
         </div>
 
         <div class="transform-card reveal">
@@ -341,14 +339,13 @@
       <span class="badge reveal">PARA QUEM É INDICADA</span>
       <h2 class="reveal">A Esteira Kids é a escolha certa para esses perfis</h2>
       <div class="indicacoes-grid">
-        <div class="indicacao-tag reveal">Paralisia cerebral infantil</div>
-        <div class="indicacao-tag reveal">Atraso no desenvolvimento motor</div>
-        <div class="indicacao-tag reveal">Distrofia muscular</div>
-        <div class="indicacao-tag reveal">Pós-cirurgia pediátrica ortopédica</div>
-        <div class="indicacao-tag reveal">Mielomeningocele</div>
-        <div class="indicacao-tag reveal">Síndrome de Down com comprometimento motor</div>
-        <div class="indicacao-tag reveal">Atendimento domiciliar</div>
-        <div class="indicacao-tag reveal">Reabilitação em creches e escolas especiais</div>
+        <div class="indicacao-tag reveal">Atraso na marcha</div>
+        <div class="indicacao-tag reveal">Desenvolvimento neuropsicomotor</div>
+        <div class="indicacao-tag reveal">Atendimento domiciliar infantil</div>
+        <div class="indicacao-tag reveal">Síndrome de Down</div>
+        <div class="indicacao-tag reveal">Paralisia Cerebral infantil</div>
+        <div class="indicacao-tag reveal">Distrofia Muscular</div>
+        <div class="indicacao-tag reveal">Transtorno do Espectro Autista (TEA)</div>
       </div>
       <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
     </div>
@@ -374,7 +371,7 @@
             <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
           </svg>
           <h3>Condições Especiais de Pagamento</h3>
-          <p>BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Parcelas que cabem na realidade do seu negócio.</p>
+          <p>Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -390,7 +387,7 @@
             <path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7M3 7l1.5-4h15L21 7M5 21V10.7M19 21V10.7"/>
           </svg>
           <h3>100% Nacional</h3>
-          <p>Fabricado em Valentim Gentil-SP e Paranaíba-MS. 45.000m² de terreno industrial, 240+ colaboradores diretos.</p>
+          <p>Fabricado nas plantas de Valentim Gentil-SP e Paranaíba-MS. Contando com mais de 92.000m² de terreno, e mais de 300 colaboradores. Qualidade industrial brasileira.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -428,10 +425,9 @@
             <tr><td>Altura</td><td>20 cm</td></tr>
             <tr><td>Área ocupada</td><td>0,40 m²</td></tr>
             <tr><td>Peso</td><td>30 kg</td></tr>
-            <tr><td>Capacidade máxima</td><td>25 kg</td></tr>
+            <tr><td>Capacidade máxima</td><td>45 kg</td></tr>
             <tr><td>Velocidade inicial</td><td>0,1 km/h</td></tr>
-            <tr><td>Área útil da lona</td><td>52 × 74 cm</td></tr>
-            <tr><td>Pintura</td><td>60 a 120 micras</td></tr>
+            <tr><td>Área útil da lona</td><td>74 x 38 cm</td></tr>
           </tbody>
         </table>
         <ul class="recursos-list">
@@ -439,7 +435,7 @@
           <li>Alça ergonômica embutida</li>
           <li>Ultra-compacta: apenas 0,40m²</li>
           <li>Velocidade ultra-lenta 0,1 km/h</li>
-          <li>Indicada para crianças e adolescentes</li>
+          <li>Indicada para crianças</li>
           <li>Ideal para atendimento domiciliar</li>
         </ul>
       </div>
@@ -472,7 +468,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">A capacidade máxima é de 25kg, indicada para crianças e adolescentes. Para pacientes adultos recomendamos a linha N8 ou N6.</div>
+            <div class="faq-answer-inner">A Esteira Kids tem a capacidade máxima de 45kg, porém deve ser avaliado se é o melhor recurso para alguns pacientes infantojuvenis devido à largura do passo que pode ser prejudicada.</div>
           </div>
         </div>
 
@@ -492,7 +488,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Protocolo desenvolvido com UNIFEV e UNIFEF especificamente para reabilitação pediátrica. A equipe comercial orienta no momento da entrega.</div>
+            <div class="faq-answer-inner">Não acompanha um protocolo específico, podendo atender diversos tipos de perfis e patologias. Entretanto, acompanha um manual de usuário e um laudo cinesioterapêutico atestando a eficácia e usabilidade.</div>
           </div>
         </div>
 
@@ -502,7 +498,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Garantia direta de fábrica. Peças 100% nacionais em estoque para atendimento rápido e sem burocracia.</div>
+            <div class="faq-answer-inner">3 anos de garantia para a estrutura e 1 ano para os componentes eletrônicos, com suporte técnico especializado em todo o Brasil para um atendimento ágil, eficiente e sem burocracia.</div>
           </div>
         </div>
 
@@ -512,7 +508,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Logística especializada em todo o território nacional com suporte técnico pós-venda em qualquer estado.</div>
+            <div class="faq-answer-inner">Sim, realizamos a entrega com frota própria e montagem por profissionais especializados, garantindo agilidade, segurança e funcionamento do equipamento desde o primeiro uso.</div>
           </div>
         </div>
 
@@ -522,7 +518,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Nossa equipe apresenta a melhor opção para seu perfil.</div>
+            <div class="faq-answer-inner">Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</div>
           </div>
         </div>
 
@@ -540,7 +536,7 @@
 
       <div class="urgencia-box reveal">
         <span class="urgencia-icon">⏰</span>
-        <p>Condições especiais disponíveis este mês. Nossa equipe está com agenda limitada para novas consultorias.</p>
+        <p>Nossa equipe está com agenda limitada para novas consultorias.</p>
       </div>
 
       <div class="form-card reveal">
@@ -604,23 +600,9 @@
             </label>
           </div>
 
-          <div class="radio-group">
-            <div class="radio-group-title">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</div>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="ate10k" required>
-              <span class="radio-custom"></span>
-              <span>Até R$10.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="10k-30k">
-              <span class="radio-custom"></span>
-              <span>De R$10.000 a R$30.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="acima30k">
-              <span class="radio-custom"></span>
-              <span>Acima de R$30.000</span>
-            </label>
+          <div class="form-group">
+            <label for="investimento">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</label>
+            <textarea id="investimento" name="investimento" class="form-input" placeholder="Descreva sua estimativa de investimento..." rows="3" required style="resize:vertical; min-height:90px;"></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="btnSubmit">SOLICITAR PROPOSTA PARA ESTE EQUIPAMENTO →</button>
@@ -641,7 +623,7 @@
             <img src="NEW_CYCLE_LOGO.png" alt="New Cycle Reabilitação" class="footer-logo">
           </a>
           <p class="footer-tagline">Equipamentos para Fisioterapia</p>
-          <p class="footer-about">Integrante do Grupo Lion, com mais de 25 anos fabricando os melhores equipamentos de reabilitação das Américas. 100% nacional.</p>
+          <p class="footer-about">Empresa do Grupo Lion há mais de 25 anos fabricando os melhores equipamentos de reabilitação do Brasil.</p>
         </div>
         <div>
           <h4>Equipamentos</h4>
@@ -659,7 +641,8 @@
             <p>📞 (17) 3485-9080</p>
             <p>📱 (17) 99681-5322 · (17) 99612-4888</p>
             <p>🔧 Suporte Técnico: (17) 99650-2674</p>
-            <p>@newcyclereab · www.newcyclereab.com.br</p>
+            <p>🌐 www.newcyclereab.com.br</p>
+            <p>📷 @newcyclereab</p>
           </div>
         </div>
       </div>
@@ -726,7 +709,7 @@
         var cidade       = document.getElementById('cidade').value.trim();
         var perfil       = form.querySelector('input[name="perfil"]:checked');
         var momento      = form.querySelector('input[name="momento"]:checked');
-        var investimento = form.querySelector('input[name="investimento"]:checked');
+        var investimento = document.getElementById('investimento').value.trim();
 
         if (!nome || !whatsapp || !email || !cidade || !perfil || !momento || !investimento) {
           formError.textContent = 'Por favor, preencha todos os campos antes de enviar.';
@@ -747,7 +730,7 @@
 
         var payload = {
           nome: nome, whatsapp: whatsapp, email: email, cidade: cidade,
-          perfil: perfil.value, momento: momento.value, investimento: investimento.value,
+          perfil: perfil.value, momento: momento.value, investimento: investimento,
           origem: 'lp-esteira-kids'
         };
 

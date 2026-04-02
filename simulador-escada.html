@@ -75,14 +75,12 @@
     .navbar-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
       padding: 6px 12px;
-      background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px;
       transition: background 0.35s ease, padding 0.35s ease;
       text-decoration: none;
     }
     .navbar.scrolled .navbar-logo-link { background: transparent !important; padding: 0; }
-    .navbar-logo { height: 40px; width: auto; display: block; transition: height 0.35s ease; }
-    .navbar.scrolled .navbar-logo { height: 34px; }
+    .navbar-logo { height: 52px; width: auto; display: block; transition: height 0.35s ease, filter 0.35s ease; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8)) drop-shadow(0 0 1px rgba(255,255,255,0.3)); }
+    .navbar.scrolled .navbar-logo { height: 42px; filter: none; }
     .navbar-links { display: flex; gap: 32px; align-items: center; }
     .navbar-links a {
       font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.5px;
@@ -119,15 +117,16 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(13,30,53,0.25) 0%, rgba(13,30,53,0.78) 100%);
+      background: linear-gradient(160deg, rgba(13,30,53,0.06) 0%, rgba(13,30,53,0.40) 100%);
       z-index: 1;
     }
     .hero-content { position: relative; z-index: 2; max-width: 760px; padding: 120px 24px 80px; }
-    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: var(--teal); margin-bottom: 24px; }
-    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; }
-    .hero-sub { font-size: 18px; color: var(--text-light2); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: #FFFFFF; margin-bottom: 24px; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 40px rgba(0,0,0,0.6); }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.92); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 1px 12px rgba(0,0,0,0.85); }
     .hero-note { font-size: 13px; color: var(--text-light2); margin-top: 20px; }
-    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 32px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 26px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 480px) { .hero h1 { font-size: 22px; } }
 
     /* ── TRANSFORMAÇÃO ── */
     .s-transform { background: var(--bg-light); padding: 100px 0; }
@@ -245,11 +244,10 @@
     .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 48px; margin-bottom: 48px; }
     .footer-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
-      padding: 6px 12px; background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px; margin-bottom: 16px; text-decoration: none;
+      margin-bottom: 16px; text-decoration: none;
     }
-    .footer-logo { height: 40px; width: auto; display: block; }
-    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light2); margin-bottom: 16px; }
+    .footer-logo { height: 52px; width: auto; display: block; filter: brightness(1.3) drop-shadow(0 1px 6px rgba(255,255,255,0.4)); }
+    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; margin-bottom: 16px; }
     .footer-about { font-size: 14px; color: var(--text-light2); line-height: 1.7; }
     .footer h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #FFFFFF; margin-bottom: 20px; }
     .footer-links a { display: block; font-size: 14px; color: var(--text-light2); padding: 4px 0; transition: color 0.3s ease; }
@@ -283,8 +281,8 @@
   <section class="hero">
     <div class="hero-content">
       <p class="hero-tag">SIMULADOR DE ESCADA · NEW CYCLE</p>
-      <h1>Simulador de Escada Fisio: cardiorrespiratório e treino de marcha em um único protocolo</h1>
-      <p class="hero-sub">Degrau cíclico com suspensão parcial de peso e velocidade ajustável. Para todas as idades e todos os níveis de comprometimento motor.</p>
+      <h1>Simulador de Escada&nbsp;Fisio: cardio e marcha em um único equipamento, progressão real para sua&nbsp;clínica.</h1>
+      <p class="hero-sub">Treino funcional seguro e progressivo, com degrau cíclico e ganchos para suspensão parcial de peso, adaptado a todas as idades e níveis de comprometimento motor.</p>
       <a href="#form-produto" class="btn-cta">Solicitar proposta para este equipamento →</a>
       <p class="hero-note">🔒 Sem compromisso · Retorno em até 24h · Consultoria gratuita</p>
     </div>
@@ -294,40 +292,40 @@
   <section class="s-transform">
     <div class="container text-center">
       <span class="badge reveal">O QUE MUDA NA SUA CLÍNICA</span>
-      <h2 class="reveal">Resultados que você vai ver desde o primeiro atendimento</h2>
+      <h2 class="reveal">Resultados visíveis e mensuráveis desde o primeiro atendimento.</h2>
       <p class="section-sub reveal">O Simulador de Escada Fisio é o equipamento que faltava para completar sua sala de reabilitação.</p>
       <div class="transform-grid">
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Dois equipamentos separados para cardio e marcha</div>
+          <div class="transform-antes">Dois equipamentos diferentes para treino de marcha e condicionamento físico</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Um equipamento que treina cardiorrespiratório e cadência de marcha ao mesmo tempo</div>
+          <div class="transform-depois">Um equipamento que integra fortalecimento muscular, controle motor e desenvolvimento da capacidade cardiorrespiratória em uma única solução.</div>
         </div>
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Progressão lenta em pacientes com medo de queda</div>
+          <div class="transform-antes">Protocolos que aumentam a insegurança e o risco de queda.</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Suspensão parcial de peso que permite evolução segura em qualquer fase</div>
+          <div class="transform-depois">Ganchos para suspensão parcial de peso que garantem evolução segura e progressiva do usuário.</div>
         </div>
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Equilíbrio dinâmico difícil de trabalhar em linha reta</div>
+          <div class="transform-antes">Déficit no equilíbrio dinâmico e na propriocepção, com impacto direto na estabilidade e no controle dos movimentos</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Degrau cíclico estimula todos os planos do equilíbrio e cadência do passo</div>
+          <div class="transform-depois">O degrau cíclico estimula a cadência da marcha, integrando os planos sagital e frontal e promovendo maior estabilidade durante o movimento.</div>
         </div>
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Espaço e custo para montar uma sala completa</div>
+          <div class="transform-antes">Preciso de muito espaço e vários equipamentos para montar uma sala completa</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">1,67m² que substitui múltiplos equipamentos de cardio e marcha</div>
+          <div class="transform-depois">O simulador de escada integra fortalecimento, controle motor, estímulo sensorial e cardiorrespiratório em um só equipamento, otimizando espaço e eficiência na clínica.</div>
         </div>
 
       </div>
@@ -342,13 +340,12 @@
       <h2 class="reveal">O Simulador de Escada é a escolha certa para esses perfis de paciente</h2>
       <div class="indicacoes-grid">
         <div class="indicacao-tag reveal">Reabilitação cardiorrespiratória</div>
-        <div class="indicacao-tag reveal">Pós-cirurgia de joelho e quadril</div>
+        <div class="indicacao-tag reveal">Pré e pós-operatório ortopédico</div>
         <div class="indicacao-tag reveal">Treino de subida e descida de escada</div>
         <div class="indicacao-tag reveal">Déficit de equilíbrio dinâmico</div>
-        <div class="indicacao-tag reveal">Reabilitação pós-AVE fase avançada</div>
-        <div class="indicacao-tag reveal">Condicionamento em idosos</div>
+        <div class="indicacao-tag reveal">Reabilitação pós-AVC</div>
+        <div class="indicacao-tag reveal">Condicionamento físico em idosos</div>
         <div class="indicacao-tag reveal">Treino de marcha rítmica</div>
-        <div class="indicacao-tag reveal">Pacientes com histórico de queda</div>
       </div>
       <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
     </div>
@@ -374,7 +371,7 @@
             <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
           </svg>
           <h3>Condições Especiais de Pagamento</h3>
-          <p>BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Parcelas que cabem na realidade do seu negócio.</p>
+          <p>Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -390,7 +387,7 @@
             <path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7M3 7l1.5-4h15L21 7M5 21V10.7M19 21V10.7"/>
           </svg>
           <h3>100% Nacional</h3>
-          <p>Fabricado em Valentim Gentil-SP e Paranaíba-MS. 45.000m² de terreno industrial, 240+ colaboradores diretos.</p>
+          <p>Fabricado nas plantas de Valentim Gentil-SP e Paranaíba-MS. Contando com mais de 92.000m² de terreno, e mais de 300 colaboradores. Qualidade industrial brasileira.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -426,13 +423,12 @@
             <tr><td>Comprimento</td><td>185 cm</td></tr>
             <tr><td>Largura</td><td>95 cm</td></tr>
             <tr><td>Altura</td><td>220 cm</td></tr>
-            <tr><td>Área ocupada</td><td>1,67 m²</td></tr>
+            <tr><td>Área ocupada</td><td>1,76 m²</td></tr>
             <tr><td>Peso</td><td>226 kg</td></tr>
             <tr><td>Capacidade máxima</td><td>160 kg</td></tr>
-            <tr><td>Velocidade inicial</td><td>1 degrau/min</td></tr>
+            <tr><td>Velocidade inicial</td><td>1 andar/min</td></tr>
             <tr><td>Altura dos degraus</td><td>20 cm</td></tr>
-            <tr><td>Dimensão da plataforma</td><td>40 cm</td></tr>
-            <tr><td>Pintura</td><td>60 a 120 micras</td></tr>
+            <tr><td>Dimensão da plataforma</td><td>40 x 20 cm</td></tr>
           </tbody>
         </table>
         <ul class="recursos-list">
@@ -473,7 +469,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. O sistema de ganchos para suspensão parcial de peso permite controlar exatamente o quanto o paciente apoia. O uso é seguro desde as fases iniciais.</div>
+            <div class="faq-answer-inner">Sim, o simulador é seguro para pacientes em fase inicial de reabilitação, pois conta com recursos que permitem adaptação progressiva, oferecendo suporte, estabilidade e controle durante toda a evolução do paciente.</div>
           </div>
         </div>
 
@@ -483,7 +479,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. O equipamento foi projetado para todas as idades. Para reabilitação infantil específica, também temos a Esteira Kids.</div>
+            <div class="faq-answer-inner">Sim, crianças podem utilizar o Simulador de Escada, desde que com ajuste adequado e supervisão profissional, permitindo um treino seguro, lúdico e adaptado ao nível de desenvolvimento motor.</div>
           </div>
         </div>
 
@@ -493,7 +489,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Ajustável via controle remoto. O ritmo pode ser extremamente lento para fases iniciais, evoluindo conforme a capacidade do paciente.</div>
+            <div class="faq-answer-inner">Com velocidade ajustável pelo painel, manoplas e controle remoto acoplado, o simulador de escada alcança até 6,5 andares por minuto, oferecendo controle total e adaptação precisa ao nível de cada paciente.</div>
           </div>
         </div>
 
@@ -503,7 +499,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Garantia direta de fábrica. Peças 100% nacionais em estoque para atendimento rápido e sem burocracia.</div>
+            <div class="faq-answer-inner">3 anos de garantia para a estrutura e 1 ano para os componentes eletrônicos, com suporte técnico especializado em todo o Brasil para um atendimento ágil, eficiente e sem burocracia.</div>
           </div>
         </div>
 
@@ -513,7 +509,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Logística especializada em todo o território nacional com suporte técnico pós-venda em qualquer estado.</div>
+            <div class="faq-answer-inner">Sim, realizamos a entrega com frota própria e montagem por profissionais especializados, garantindo agilidade, segurança e funcionamento do equipamento desde o primeiro uso.</div>
           </div>
         </div>
 
@@ -523,7 +519,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Nossa equipe apresenta a melhor opção para seu perfil.</div>
+            <div class="faq-answer-inner">Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</div>
           </div>
         </div>
 
@@ -541,7 +537,7 @@
 
       <div class="urgencia-box reveal">
         <span class="urgencia-icon">⏰</span>
-        <p>Condições especiais disponíveis este mês. Nossa equipe está com agenda limitada para novas consultorias.</p>
+        <p>Nossa equipe está com agenda limitada para novas consultorias.</p>
       </div>
 
       <div class="form-card reveal">
@@ -605,23 +601,9 @@
             </label>
           </div>
 
-          <div class="radio-group">
-            <div class="radio-group-title">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</div>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="ate10k" required>
-              <span class="radio-custom"></span>
-              <span>Até R$10.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="10k-30k">
-              <span class="radio-custom"></span>
-              <span>De R$10.000 a R$30.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="acima30k">
-              <span class="radio-custom"></span>
-              <span>Acima de R$30.000</span>
-            </label>
+          <div class="form-group">
+            <label for="investimento">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</label>
+            <textarea id="investimento" name="investimento" class="form-input" placeholder="Descreva sua estimativa de investimento..." rows="3" required style="resize:vertical; min-height:90px;"></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="btnSubmit">SOLICITAR PROPOSTA PARA ESTE EQUIPAMENTO →</button>
@@ -642,7 +624,7 @@
             <img src="NEW_CYCLE_LOGO.png" alt="New Cycle Reabilitação" class="footer-logo">
           </a>
           <p class="footer-tagline">Equipamentos para Fisioterapia</p>
-          <p class="footer-about">Integrante do Grupo Lion, com mais de 25 anos fabricando os melhores equipamentos de reabilitação das Américas. 100% nacional.</p>
+          <p class="footer-about">Empresa do Grupo Lion há mais de 25 anos fabricando os melhores equipamentos de reabilitação do Brasil.</p>
         </div>
         <div>
           <h4>Equipamentos</h4>
@@ -660,7 +642,8 @@
             <p>📞 (17) 3485-9080</p>
             <p>📱 (17) 99681-5322 · (17) 99612-4888</p>
             <p>🔧 Suporte Técnico: (17) 99650-2674</p>
-            <p>@newcyclereab · www.newcyclereab.com.br</p>
+            <p>🌐 www.newcyclereab.com.br</p>
+            <p>📷 @newcyclereab</p>
           </div>
         </div>
       </div>
@@ -727,7 +710,7 @@
         var cidade       = document.getElementById('cidade').value.trim();
         var perfil       = form.querySelector('input[name="perfil"]:checked');
         var momento      = form.querySelector('input[name="momento"]:checked');
-        var investimento = form.querySelector('input[name="investimento"]:checked');
+        var investimento = document.getElementById('investimento').value.trim();
 
         if (!nome || !whatsapp || !email || !cidade || !perfil || !momento || !investimento) {
           formError.textContent = 'Por favor, preencha todos os campos antes de enviar.';
@@ -748,7 +731,7 @@
 
         var payload = {
           nome: nome, whatsapp: whatsapp, email: email, cidade: cidade,
-          perfil: perfil.value, momento: momento.value, investimento: investimento.value,
+          perfil: perfil.value, momento: momento.value, investimento: investimento,
           origem: 'lp-simulador-escada'
         };
 

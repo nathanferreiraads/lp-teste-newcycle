@@ -75,14 +75,12 @@
     .navbar-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
       padding: 6px 12px;
-      background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px;
       transition: background 0.35s ease, padding 0.35s ease;
       text-decoration: none;
     }
     .navbar.scrolled .navbar-logo-link { background: transparent !important; padding: 0; }
-    .navbar-logo { height: 40px; width: auto; display: block; transition: height 0.35s ease; }
-    .navbar.scrolled .navbar-logo { height: 34px; }
+    .navbar-logo { height: 52px; width: auto; display: block; transition: height 0.35s ease, filter 0.35s ease; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8)) drop-shadow(0 0 1px rgba(255,255,255,0.3)); }
+    .navbar.scrolled .navbar-logo { height: 42px; filter: none; }
     .navbar-links { display: flex; gap: 32px; align-items: center; }
     .navbar-links a {
       font-family: 'Montserrat', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 0.5px;
@@ -119,13 +117,13 @@
     }
     .hero::before {
       content: ''; position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(13,30,53,0.25) 0%, rgba(13,30,53,0.78) 100%);
+      background: linear-gradient(160deg, rgba(13,30,53,0.12) 0%, rgba(13,30,53,0.55) 100%);
       z-index: 1;
     }
     .hero-content { position: relative; z-index: 2; max-width: 760px; padding: 120px 24px 80px; }
-    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: var(--teal); margin-bottom: 24px; }
-    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; }
-    .hero-sub { font-size: 18px; color: var(--text-light2); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; }
+    .hero-tag { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 3px; color: #FFFFFF; margin-bottom: 24px; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
+    .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; text-shadow: 0 2px 12px rgba(0,0,0,0.7); }
+    .hero-sub { font-size: 18px; color: rgba(255,255,255,0.92); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 1px 8px rgba(0,0,0,0.65); }
     .hero-note { font-size: 13px; color: var(--text-light2); margin-top: 20px; }
     @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 32px; } .hero-sub { font-size: 15px; } }
 
@@ -245,11 +243,10 @@
     .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1fr; gap: 48px; margin-bottom: 48px; }
     .footer-logo-link {
       display: inline-flex; align-items: center; line-height: 0;
-      padding: 6px 12px; background: rgba(255,255,255,0.95) !important;
-      border-radius: 8px; margin-bottom: 16px; text-decoration: none;
+      margin-bottom: 16px; text-decoration: none;
     }
-    .footer-logo { height: 40px; width: auto; display: block; }
-    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light2); margin-bottom: 16px; }
+    .footer-logo { height: 52px; width: auto; display: block; filter: brightness(1.3) drop-shadow(0 1px 6px rgba(255,255,255,0.4)); }
+    .footer-tagline { font-family: 'Open Sans', sans-serif; font-weight: 500; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; margin-bottom: 16px; }
     .footer-about { font-size: 14px; color: var(--text-light2); line-height: 1.7; }
     .footer h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #FFFFFF; margin-bottom: 20px; }
     .footer-links a { display: block; font-size: 14px; color: var(--text-light2); padding: 4px 0; transition: color 0.3s ease; }
@@ -283,8 +280,8 @@
   <section class="hero">
     <div class="hero-content">
       <p class="hero-tag">ESTEIRA NEUROFUNCIONAL · NEW CYCLE</p>
-      <h1>Esteira Neurofuncional N8: o protocolo de marcha mais avançado do Brasil na sua clínica</h1>
-      <p class="hero-sub">Inversão de marcha, inclinação até 15 graus, painel touch screen e velocidade de 0,1 a 13 km/h. Projetada para resultados que você pode medir e documentar desde o primeiro atendimento.</p>
+      <h1>Esteira&nbsp;Neurofuncional&nbsp;N8: O protocolo de marcha mais avançado do Brasil na sua clínica</h1>
+      <p class="hero-sub">A Esteira N8 oferece controle preciso em cada sessão e foi projetada para a prática clínica, permitindo medir, acompanhar e documentar a evolução do paciente desde o primeiro atendimento, com mais segurança, eficiência e resultados consistentes.</p>
       <a href="#form-produto" class="btn-cta">Solicitar proposta para este equipamento →</a>
       <p class="hero-note">🔒 Sem compromisso · Retorno em até 24h · Consultoria gratuita</p>
     </div>
@@ -294,7 +291,7 @@
   <section class="s-transform">
     <div class="container text-center">
       <span class="badge reveal">O QUE MUDA NA SUA CLÍNICA</span>
-      <h2 class="reveal">Resultados que você vai ver desde o primeiro atendimento</h2>
+      <h2 class="reveal">Resultados visíveis e mensuráveis desde o primeiro atendimento.</h2>
       <p class="section-sub reveal">A Esteira Neurofuncional N8 não é apenas um equipamento. É uma plataforma completa de reabilitação.</p>
       <div class="transform-grid">
 
@@ -303,15 +300,15 @@
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Neuroplasticidade real: inversão de marcha, sensor de parada e velocidade 0,1 km/h</div>
+          <div class="transform-depois">Neuroplasticidade aplicada na prática, com segurança e controle por meio de protocolos validados.</div>
         </div>
 
         <div class="transform-card reveal">
-          <div class="transform-antes">Paciente dependente 100% do comando do fisio</div>
+          <div class="transform-antes">Paciente dependente 100% do comando do fisioterapeuta</div>
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Autonomia progressiva com painel touch e pedaleira de controle</div>
+          <div class="transform-depois">Autonomia progressiva, com espaço para independência e individualização do tratamento.</div>
         </div>
 
         <div class="transform-card reveal">
@@ -319,7 +316,7 @@
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Sua clínica vira referência regional em reabilitação neurológica</div>
+          <div class="transform-depois">Sua clínica vira referência nacional em reabilitação neurológica e ortopédica.</div>
         </div>
 
         <div class="transform-card reveal">
@@ -327,7 +324,7 @@
           <div class="transform-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
           </div>
-          <div class="transform-depois">Protocolos documentáveis com evolução registrada por sessão</div>
+          <div class="transform-depois">Registro preciso da evolução do paciente a cada sessão, garantindo acompanhamento clínico confiável e decisões terapêuticas mais assertivas.</div>
         </div>
 
       </div>
@@ -339,17 +336,19 @@
   <section class="s-indicacoes">
     <div class="container text-center">
       <span class="badge reveal">PARA QUEM É INDICADA</span>
-      <h2 class="reveal">A Esteira N8 é a escolha certa para esses perfis de paciente</h2>
+      <h2 class="reveal">A Esteira N8 é a sua escolha para esses perfis de paciente</h2>
       <div class="indicacoes-grid">
-        <div class="indicacao-tag reveal">Pós-AVE e sequelas neurológicas</div>
-        <div class="indicacao-tag reveal">Parkinson e distúrbios do movimento</div>
-        <div class="indicacao-tag reveal">Reabilitação pós-cirurgia ortopédica</div>
-        <div class="indicacao-tag reveal">Lesão medular incompleta</div>
-        <div class="indicacao-tag reveal">Paralisia cerebral adulta</div>
-        <div class="indicacao-tag reveal">Ataxia e descoordenação motora</div>
-        <div class="indicacao-tag reveal">Reabilitação geriátrica avançada</div>
-        <div class="indicacao-tag reveal">Treino de marcha em qualquer fase</div>
+        <div class="indicacao-tag reveal">1 · Pós-AVC</div>
+        <div class="indicacao-tag reveal">2 · Doença de Parkinson</div>
+        <div class="indicacao-tag reveal">3 · Pré e pós-operatório ortopédico</div>
+        <div class="indicacao-tag reveal">4 · Distúrbios do movimento</div>
+        <div class="indicacao-tag reveal">5 · Reabilitação geriátrica</div>
+        <div class="indicacao-tag reveal">6 · Paralisia cerebral</div>
+        <div class="indicacao-tag reveal">7 · Transtorno do Espectro Autista (TEA)</div>
+        <div class="indicacao-tag reveal">8 · Traumatismos cranioencefálicos e raquimedulares</div>
+        <div class="indicacao-tag reveal">9 · Treino de marcha</div>
       </div>
+      <p style="font-size:12px; color:var(--text-muted); margin-top:20px; font-style:italic;">Consulte sempre um profissional qualificado para orientação adequada.</p>
       <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
     </div>
   </section>
@@ -374,7 +373,7 @@
             <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
           </svg>
           <h3>Condições Especiais de Pagamento</h3>
-          <p>BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Parcelas que cabem na realidade do seu negócio.</p>
+          <p>Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -382,7 +381,7 @@
             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
           </svg>
           <h3>Suporte Técnico Nacional</h3>
-          <p>Equipe técnica própria em todo o Brasil. Estoque exclusivo de peças 100% nacionais para resposta ágil.</p>
+          <p>Equipe técnica própria em todo o Brasil. Estoque exclusivo de peças 100% nacionais. Tel: (17) 99776-3765</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -390,7 +389,7 @@
             <path d="M3 21h18M3 7v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7m0 0v1a3 3 0 006 0V7M3 7l1.5-4h15L21 7M5 21V10.7M19 21V10.7"/>
           </svg>
           <h3>100% Nacional</h3>
-          <p>Fabricado em Valentim Gentil-SP e Paranaíba-MS. 45.000m² de terreno industrial, 240+ colaboradores diretos.</p>
+          <p>Fabricado nas plantas de Valentim Gentil-SP e Paranaíba-MS. Contando com mais de 92.000m² de terreno, e mais de 300 colaboradores. Qualidade industrial brasileira.</p>
         </div>
 
         <div class="porque-prod-card reveal">
@@ -406,7 +405,7 @@
             <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2zM22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
           </svg>
           <h3>Protocolos Acadêmicos</h3>
-          <p>Protocolos desenvolvidos com UNIFEV e UNIFEF para garantir eficácia clínica comprovada nos tratamentos.</p>
+          <p>Desenvolvemos protocolos com universidades para garantir eficácia clínica comprovada nos tratamentos com nossos equipamentos.</p>
         </div>
 
       </div>
@@ -427,12 +426,11 @@
             <tr><td>Largura</td><td>130 cm</td></tr>
             <tr><td>Altura</td><td>170 cm</td></tr>
             <tr><td>Área ocupada</td><td>2,9 m²</td></tr>
+            <tr><td>Área útil da lona</td><td>120 x 50 cm</td></tr>
             <tr><td>Peso</td><td>210 kg</td></tr>
             <tr><td>Capacidade máxima</td><td>160 kg</td></tr>
             <tr><td>Velocidade</td><td>0,1 a 13 km/h</td></tr>
             <tr><td>Inclinação máxima</td><td>15°</td></tr>
-            <tr><td>Área útil da lona</td><td>80 × 120 cm</td></tr>
-            <tr><td>Pintura</td><td>60 a 120 micras</td></tr>
           </tbody>
         </table>
         <ul class="recursos-list">
@@ -476,7 +474,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. O sensor de parada automática na marcha reversa garante a segurança. A velocidade de 0,1 km/h permite controle total mesmo em casos neurológicos severos.</div>
+            <div class="faq-answer-inner">Sim. Além de contar com um sensor de parada automática na marcha reversa, a inversão do sentido da lona é limitada a até 1,5 km/h, priorizando a segurança do usuário.</div>
           </div>
         </div>
 
@@ -496,7 +494,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Nossa equipe técnica avalia o espaço antes da entrega e orienta sobre a instalação. O suporte técnico pós-venda está incluído.</div>
+            <div class="faq-answer-inner">Sim, é essencial realizar o aterramento da tomada utilizada com a esteira, garantindo a segurança do paciente e preservando a integridade do sistema elétrico do equipamento.</div>
           </div>
         </div>
 
@@ -506,7 +504,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Garantia direta de fábrica. Peças 100% nacionais em estoque para atendimento rápido e sem burocracia.</div>
+            <div class="faq-answer-inner">3 anos de garantia para a estrutura e 1 ano para os componentes eletrônicos, com suporte técnico especializado em todo o Brasil para um atendimento ágil, eficiente e sem burocracia.</div>
           </div>
         </div>
 
@@ -516,7 +514,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. Logística especializada em todo o território nacional com suporte técnico pós-venda em qualquer estado.</div>
+            <div class="faq-answer-inner">Sim, realizamos a entrega com frota própria e montagem por profissionais especializados, garantindo agilidade, segurança e funcionamento do equipamento desde o primeiro uso.</div>
           </div>
         </div>
 
@@ -526,7 +524,7 @@
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </div>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Sim. BB, BNB, BNDES, Visa, Mastercard, Elo e American Express. Nossa equipe apresenta a melhor opção para seu perfil.</div>
+            <div class="faq-answer-inner">Aceitamos as bandeiras Banco do Brasil, Banco do Nordeste, Cartão BNDES, Visa, Mastercard, Elo e American Express. Aluguel ou financiamento disponíveis mediante análise e aprovação de crédito.</div>
           </div>
         </div>
 
@@ -539,12 +537,12 @@
   <section class="s-form" id="form-produto">
     <div class="container text-center">
       <span class="badge reveal">PROPOSTA PERSONALIZADA</span>
-      <h2 class="reveal">Solicite uma proposta para a Esteira Neurofuncional N8</h2>
+      <h2 class="reveal">Solicite sua proposta exclusiva</h2>
       <p class="section-sub reveal">Nossa equipe entra em contato em até 24h com condições especiais de pagamento.</p>
 
       <div class="urgencia-box reveal">
         <span class="urgencia-icon">⏰</span>
-        <p>Condições especiais disponíveis este mês. Nossa equipe está com agenda limitada para novas consultorias.</p>
+        <p>Nossa equipe está com agenda limitada para novas consultorias.</p>
       </div>
 
       <div class="form-card reveal">
@@ -608,23 +606,9 @@
             </label>
           </div>
 
-          <div class="radio-group">
-            <div class="radio-group-title">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</div>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="ate10k" required>
-              <span class="radio-custom"></span>
-              <span>Até R$10.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="10k-30k">
-              <span class="radio-custom"></span>
-              <span>De R$10.000 a R$30.000</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="investimento" value="acima30k">
-              <span class="radio-custom"></span>
-              <span>Acima de R$30.000</span>
-            </label>
+          <div class="form-group">
+            <label for="investimento">Qual a estimativa de investimento para elevar o nível dos seus atendimentos?</label>
+            <textarea id="investimento" name="investimento" class="form-input" placeholder="Descreva sua estimativa de investimento..." rows="3" required style="resize:vertical; min-height:90px;"></textarea>
           </div>
 
           <button type="submit" class="btn-submit" id="btnSubmit">SOLICITAR PROPOSTA PARA ESTE EQUIPAMENTO →</button>
@@ -730,7 +714,7 @@
         var cidade       = document.getElementById('cidade').value.trim();
         var perfil       = form.querySelector('input[name="perfil"]:checked');
         var momento      = form.querySelector('input[name="momento"]:checked');
-        var investimento = form.querySelector('input[name="investimento"]:checked');
+        var investimento = document.getElementById('investimento').value.trim();
 
         if (!nome || !whatsapp || !email || !cidade || !perfil || !momento || !investimento) {
           formError.textContent = 'Por favor, preencha todos os campos antes de enviar.';
@@ -751,7 +735,7 @@
 
         var payload = {
           nome: nome, whatsapp: whatsapp, email: email, cidade: cidade,
-          perfil: perfil.value, momento: momento.value, investimento: investimento.value,
+          perfil: perfil.value, momento: momento.value, investimento: investimento,
           origem: 'lp-esteira-n8'
         };
 
