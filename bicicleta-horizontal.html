@@ -125,7 +125,8 @@
     .hero h1 { font-size: 50px; color: #FFFFFF; margin-bottom: 24px; line-height: 1.1; text-shadow: 0 2px 16px rgba(0,0,0,0.95), 0 0 40px rgba(0,0,0,0.6); }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.92); max-width: 580px; margin: 0 auto 40px; line-height: 1.7; text-shadow: 0 1px 12px rgba(0,0,0,0.85); }
     .hero-note { font-size: 13px; color: var(--text-light2); margin-top: 20px; }
-    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 26px; } .hero-sub { font-size: 15px; } }
+    @media (max-width: 768px) { .hero { background-attachment: scroll; } .hero h1 { font-size: 26px; } .hero-sub { font-size: 15px; } .btn-cta { font-size: 12px; letter-spacing: 0.8px; padding: 16px 24px; } }
+    @media (max-width: 480px) { .hero h1 { font-size: 22px; } }
     @media (max-width: 480px) { .hero h1 { font-size: 22px; } }
 
     /* ── TRANSFORMAÇÃO ── */
@@ -283,7 +284,7 @@
       <p class="hero-tag">BICICLETA HORIZONTAL · NEW CYCLE</p>
       <h1>Bicicleta Horizontal&nbsp;LF-450D: aeróbico completo sem impacto, seguro para qualquer perfil de&nbsp;paciente</h1>
       <p class="hero-sub">Posição reclinada que elimina sobrecarga articular. Display LED com monitoramento de frequência cardíaca e capacidade até 160kg. Indicada para reabilitação cardiorrespiratória, ortopédica e geriátrica.</p>
-      <a href="#form-produto" class="btn-cta">Solicitar proposta para este equipamento →</a>
+      <a href="#form-produto" class="btn-cta">Solicitar proposta →</a>
       <p class="hero-note">🔒 Sem compromisso · Retorno em até 24h · Consultoria gratuita</p>
     </div>
   </section>
@@ -329,7 +330,7 @@
         </div>
 
       </div>
-      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
+      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta →</a>
     </div>
   </section>
 
@@ -348,7 +349,7 @@
         <div class="indicacao-tag reveal">Artrose e artrite avançada</div>
         <div class="indicacao-tag reveal">Condicionamento físico de baixo impacto</div>
       </div>
-      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
+      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta →</a>
     </div>
   </section>
 
@@ -408,7 +409,7 @@
         </div>
 
       </div>
-      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
+      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta →</a>
     </div>
   </section>
 
@@ -438,7 +439,7 @@
           <li>Estrutura robusta de alta resistência</li>
         </ul>
       </div>
-      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta para este equipamento →</a>
+      <a href="#form-produto" class="btn-cta reveal">Solicitar proposta →</a>
     </div>
   </section>
 
@@ -556,10 +557,7 @@
             <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com.br" autocomplete="email" required>
           </div>
 
-          <div class="form-group">
-            <label for="cidade">Cidade e Estado</label>
-            <input type="text" id="cidade" name="cidade" class="form-input" placeholder="Ex: Votuporanga, SP" autocomplete="address-level2" required>
-          </div>
+
 
           <div class="radio-group">
             <div class="radio-group-title">Você é dono ou representante de uma clínica?</div>
@@ -704,12 +702,11 @@
         var nome         = document.getElementById('nome').value.trim();
         var whatsapp     = document.getElementById('whatsapp').value.trim();
         var email        = document.getElementById('email').value.trim();
-        var cidade       = document.getElementById('cidade').value.trim();
         var perfil       = form.querySelector('input[name="perfil"]:checked');
         var momento      = form.querySelector('input[name="momento"]:checked');
         var investimento = document.getElementById('investimento').value.trim();
 
-        if (!nome || !whatsapp || !email || !cidade || !perfil || !momento || !investimento) {
+        if (!nome || !whatsapp || !email || !perfil || !momento || !investimento) {
           formError.textContent = 'Por favor, preencha todos os campos antes de enviar.';
           formError.style.display = 'block';
           formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -727,7 +724,7 @@
         }
 
         var payload = {
-          nome: nome, whatsapp: whatsapp, email: email, cidade: cidade,
+          nome: nome, whatsapp: whatsapp, email: email,
           perfil: perfil.value, momento: momento.value, investimento: investimento,
           origem: 'lp-bicicleta-horizontal'
         };
